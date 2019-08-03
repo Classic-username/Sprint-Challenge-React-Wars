@@ -48,6 +48,7 @@ Const PropFunction(pass, props, here){
 
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
 Side effects are undesired/unexpected results of something happening outside the code we write. With an axios call we put useEffect( (in front of it, and throw an array at the end), []); that way either the value in the array is what tells the call to run again, or an empty array only allows it to run once. If we don't do this, we'll send un-ending requests and either hit a limit, or get monumental charges from the request database.
+<!-- something happened I was in the wrong directory -->
 
 ## Project Set Up
 
