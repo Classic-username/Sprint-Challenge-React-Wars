@@ -18,11 +18,18 @@ const App = () => {
   `;
 
   let NiceDiv = styled.div`
-    max-width: 250px;
-    background: rgba(63, 63, 191, 0.2);
+    display: flex;
+    flex-wrap: wrap;
     padding-bottom: 10px;
+    align-self: center;
   `;
-
+  let NiceDivWrapper = styled.div`
+    background: rgba(63, 63, 191, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  `;
   useEffect(() => {
     axios
       .get("https://swapi.co/api/people/")
@@ -42,12 +49,14 @@ const App = () => {
   return (
     <MasterDiv className="App">
       <h1 className="Header">React Wars</h1>
-      <NiceDiv>
+      <NiceDivWrapper>
         <h4>People List</h4>
-        {peopleData.map(cv => {
-          return <CharComp props={cv} key={cv.name} />;
-        })}
-      </NiceDiv>
+        <NiceDiv>
+          {peopleData.map(cv => {
+            return <CharComp props={cv} key={cv.name} />;
+          })}
+        </NiceDiv>
+      </NiceDivWrapper>
     </MasterDiv>
   );
 };
