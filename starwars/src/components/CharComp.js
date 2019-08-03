@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-let NiceDiv = styled.div`
-    max-width: 200px;
+let BorderedDiv = styled.div`
+    border: 1px dotted black;
 `;
 
 export default function CharComp({props}){
     return (
-        <NiceDiv>
-            <h3>Name: {props}</h3>
-        </NiceDiv>
+        <BorderedDiv>
+            Name: {props.name}
+        </BorderedDiv>
     )
 }

@@ -1,29 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import CharComp from './CharComp';
+// import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+// import CharComp from './CharComp';
 
 
-export default function CharData(){
-    const myArray = []
+// export default function CharData(){
 
-    const [ peopleData, setPeopleData ] = useState(myArray);
-    useEffect(() => {
-      axios
-        .get('https://swapi.co/api/people/')
-        .then(response => {
-          console.log('in axios get', response.data.results)
-          response.data.results.forEach(cv => {
-            myArray.push(cv.name)
-          })
+   
+// }
+
+ // ABSOLUTELY FAILED EXPERIMENT
+    // const myArray = []
+
+    // const [ peopleData, setPeopleData ] = useState(myArray);
+    // useEffect(() => {
+    //   axios
+    //     .get('https://swapi.co/api/people/')
+    //     .then(response => {
+    //       console.log('in axios get', response.data.results)
+    //       response.data.results.forEach(cv => {
+    //         myArray.push(cv.name)
+    //       })
           
   
-        })
-        .catch(reject => {
-          console.log('failed to load', reject)
-        })
-    }, [])
+    //     })
+    //     .catch(reject => {
+    //       console.log('failed to load', reject)
+    //     })
+    // }, [])
   
-    console.log('peopleData', peopleData)
+    // console.log('peopleData', peopleData)
 
     // return(
     //     peopleData.map(cv => {
@@ -32,7 +37,7 @@ export default function CharData(){
     //         )
     //     })
     // )
-}
+
 
 /* export default function CharData(){
 
