@@ -26,13 +26,29 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React JS is an environment in which multiple levels of front-end web development take place. It tries to solve the problem of having an HTML file, a CSS file, AND a JavaScript file. With React we make elements, style them and make them functional with actual JavaScript code. Throughout the last two weeks we've used hooks and state to build componential pieces of code and call them through various files.
+
 - [ ] What does it mean to _think_ in react?
+
+It means thinking in components. Want a header? Build it once. Call it on every page without having to change specific lines. Use state and props to change information as it's processed.
 
 - [ ] Describe state.
 
+Const [ information, setInformation ] = useState(this could be an array, an object, probably anything.)
+Can be used with useEffect to feed information from something like axios and update your site DYNAMICALLY.
+
 - [ ] Describe props.
+Const PropFunction(pass, props, here){
+    and call the specific props={something javascript}
+    down in the function, we're pass={ing information}
+    or:
+    <div here={is another way we can use props} />
+
+}
 
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+Side effects are undesired/unexpected results of something happening outside the code we write. With an axios call we put useEffect( (in front of it, and throw an array at the end), []); that way either the value in the array is what tells the call to run again, or an empty array only allows it to run once. If we don't do this, we'll send un-ending requests and either hit a limit, or get monumental charges from the request database.
+<!-- something happened I was in the wrong directory -->
 
 ## Project Set Up
 
@@ -60,12 +76,12 @@ Follow these steps for completing your project:
 
 Your finished project must include all of the following requirements:
 
-- [ ] Fetch a list of Star Wars characters from the [Star Wars API (or SWAPI)](https://swapi.co/) and render them to the screen. 
-- [ ] Follow the documentation to learn how to fetch a list of "people". However, don't spend _too_ long on this. Here is a link for you to follow if you've looked around the docs for about 15 minutes or so and haven't found where to go - [Secret Link to Awesomeness 🤫](https://swapi.co/documentation#people).
-- [ ] Set the data you fetch to state.
-- [ ] Map over the list and render a component for each character on the page.
-- [ ] You must have at least one element for each star wars character in the data set.
-- [ ] The elements must be styled with either SemanticUI or styled-components - don't rely on browser default styles.
+- [x] Fetch a list of Star Wars characters from the [Star Wars API (or SWAPI)](https://swapi.co/) and render them to the screen. 
+- [x] Follow the documentation to learn how to fetch a list of "people". However, don't spend _too_ long on this. Here is a link for you to follow if you've looked around the docs for about 15 minutes or so and haven't found where to go - [Secret Link to Awesomeness 🤫](https://swapi.co/documentation#people).
+- [x] Set the data you fetch to state.
+- [x] Map over the list and render a component for each character on the page.
+- [x] You must have at least one element for each star wars character in the data set.
+- [x] The elements must be styled with either SemanticUI or styled-components - don't rely on browser default styles.
 
 #### Required best practices:
 
